@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UISkeleton'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A simple way to show users a placeholder for the real content that the app is about to show them'
 
   s.description      = <<-DESC

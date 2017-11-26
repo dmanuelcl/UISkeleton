@@ -1,9 +1,9 @@
 {
   "name": "UISkeleton",
   "version": "0.1.0",
-  "summary": "A short description of UISkeleton.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Dani Manuel Céspedes Lara/UISkeleton",
+  "summary": "A simple way to show users a placeholder for the real content that the app is about to show them",
+  "description": "Speed Up Your UX with Skeleton Screens. A simple way to show users a placeholder for the real content that the app is about to show them",
+  "homepage": "https://github.com/dmanuelcl/UISkeleton",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "Dani Manuel Céspedes Lara": "dmanuelcl@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Dani Manuel Céspedes Lara/UISkeleton.git",
+    "git": "https://github.com/dmanuelcl/UISkeleton.git",
     "tag": "0.1.0"
   },
   "platforms": {
