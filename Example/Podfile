@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'UISkeleton_Example' do
+  pod 'UISkeleton', :path => '../'
+
+  target 'UISkeleton_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
