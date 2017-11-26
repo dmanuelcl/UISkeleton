@@ -1,0 +1,6 @@
+framework module UISkeleton {
+  umbrella header "UISkeleton-umbrella.h"
+
+  export *
+  module * { export * }
+}

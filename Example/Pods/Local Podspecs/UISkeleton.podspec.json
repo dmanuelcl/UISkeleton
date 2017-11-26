@@ -1,0 +1,27 @@
+{
+  "name": "UISkeleton",
+  "version": "0.1.0",
+  "summary": "A short description of UISkeleton.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Dani Manuel Céspedes Lara/UISkeleton",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Dani Manuel Céspedes Lara": "dmanuelcl@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Dani Manuel Céspedes Lara/UISkeleton.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "UISkeleton/Classes/**/*",
+  "dependencies": {
+    "Skeleton": [
+      "0.1.0"
+    ]
+  }
+}

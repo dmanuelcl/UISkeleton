@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A9C294D659A393881865A07 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		0A9C294D659A393881865A07 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		0B310AD80E70712205BA2532 /* Pods-UISkeleton_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UISkeleton_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UISkeleton_Example/Pods-UISkeleton_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5A9489934BCF1CF6C2666EC0 /* Pods-UISkeleton_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UISkeleton_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-UISkeleton_Example/Pods-UISkeleton_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* UISkeleton_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UISkeleton_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,9 +41,9 @@
 		607FACE51AFB9204008FA782 /* UISkeleton_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UISkeleton_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		7CA298FDBE8AADFDA5F1E591 /* UISkeleton.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = UISkeleton.podspec; path = ../UISkeleton.podspec; sourceTree = "<group>"; };
+		7CA298FDBE8AADFDA5F1E591 /* UISkeleton.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UISkeleton.podspec; path = ../UISkeleton.podspec; sourceTree = "<group>"; };
 		8DAB607E458C0FE5C224B14B /* Pods-UISkeleton_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UISkeleton_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UISkeleton_Tests/Pods-UISkeleton_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		9EFEF8C1E69FECAE0641A927 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9EFEF8C1E69FECAE0641A927 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		AB4209ED702A2536D581150E /* Pods_UISkeleton_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UISkeleton_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02AE4FF1263DAE611FF94E7 /* Pods_UISkeleton_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UISkeleton_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D43AC4C367F5CE024B3CFF /* Pods-UISkeleton_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UISkeleton_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UISkeleton_Tests/Pods-UISkeleton_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,10 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = RDZLL9T9BG;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = RDZLL9T9BG;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -271,10 +273,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-UISkeleton_Example/Pods-UISkeleton_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Skeleton/Skeleton.framework",
 				"${BUILT_PRODUCTS_DIR}/UISkeleton/UISkeleton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Skeleton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UISkeleton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +521,7 @@
 			baseConfigurationReference = 0B310AD80E70712205BA2532 /* Pods-UISkeleton_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RDZLL9T9BG;
 				INFOPLIST_FILE = UISkeleton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -532,6 +537,7 @@
 			baseConfigurationReference = 5A9489934BCF1CF6C2666EC0 /* Pods-UISkeleton_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RDZLL9T9BG;
 				INFOPLIST_FILE = UISkeleton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -546,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8DAB607E458C0FE5C224B14B /* Pods-UISkeleton_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = RDZLL9T9BG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -567,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0D43AC4C367F5CE024B3CFF /* Pods-UISkeleton_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = RDZLL9T9BG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
