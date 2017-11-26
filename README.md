@@ -1,7 +1,5 @@
 # UISkeleton
 
-[![CI Status](http://img.shields.io/travis/Dani Manuel Céspedes Lara/UISkeleton.svg?style=flat)](https://travis-ci.org/Dani Manuel Céspedes Lara/UISkeleton)
-[![Version](https://img.shields.io/cocoapods/v/UISkeleton.svg?style=flat)](http://cocoapods.org/pods/UISkeleton)
 [![License](https://img.shields.io/cocoapods/l/UISkeleton.svg?style=flat)](http://cocoapods.org/pods/UISkeleton)
 [![Platform](https://img.shields.io/cocoapods/p/UISkeleton.svg?style=flat)](http://cocoapods.org/pods/UISkeleton)
 
