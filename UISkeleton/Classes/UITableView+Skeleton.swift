@@ -8,24 +8,36 @@
 import UIKit
 import Skeleton
 
-
 extension UITableView{
     
     private struct associatedKeys {
         static var realDataSource: String = "realDataSource"
         static var realDelegate: String = "realDelegate"
-        static var reusableIdentifier: String = "reusableIdentifier"
+        static var skeletonCellIdentifier: String = "skeletonCellIdentifier"
+        static var skeletonDataSource: String = "skeletonDataSource"
     }
     
     
-    var reusableIdentifier: String?{
+    var skeletonCellIdentifier: String?{
         get{
-            return associatedObject(base: self, key: &associatedKeys.reusableIdentifier){
+            return associatedObject(base: self, key: &associatedKeys.skeletonCellIdentifier){
                 return nil
             }
         }
         set(value){
-            associateObject(base: self, key: &associatedKeys.reusableIdentifier, value: value)
+            associateObject(base: self, key: &associatedKeys.skeletonCellIdentifier, value: value)
+        }
+    }
+    
+    
+    var skeletonDataSource: SkeletonTableViewDataSource?{
+        get{
+            return associatedObject(base: self, key: &associatedKeys.skeletonDataSource){
+                return nil
+            }
+        }
+        set(value){
+            associateObject(base: self, key: &associatedKeys.skeletonDataSource, value: value)
         }
     }
     
@@ -51,20 +63,27 @@ extension UITableView{
         }
     }
     
-    public func showSkeletonView(reusableIdentifier: String, direction: Direction = .right){
+    public func showSkeletonView(skeletonCellIdentifier: String, direction: Direction = .right){
         self.realDelegate = self.delegate
         self.realDataSource = self.dataSource
-        
-        let skletonDataStore = SkeletonTableViewDataSource()
-        self.dataSource = skletonDataStore
-        self.delegate = skletonDataStore
         self.isScrollEnabled = false
+        self.isUserInteractionEnabled = false
+        self.skeletonCellIdentifier = skeletonCellIdentifier
+        
+        self.skeletonDataSource = SkeletonTableViewDataSource()
+        self.dataSource = self.skeletonDataSource
+        self.delegate = self.skeletonDataSource
+        self.reloadData()
     }
     
     public func hideSkeletonView(){
+        self.visibleCells.forEach { (cell) in
+            cell.removeSkeleton()
+        }
         self.delegate = self.realDelegate
         self.dataSource = self.realDataSource
         self.isScrollEnabled = true
+        self.isUserInteractionEnabled = true
         self.reloadData()
     }
 }

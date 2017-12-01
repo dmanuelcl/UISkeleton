@@ -19,10 +19,10 @@ class SkeletonTableViewDataSource: NSObject, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let reusableIdentifier = tableView.reusableIdentifier, let cell = tableView.dequeueReusableCell(withIdentifier: reusableIdentifier) else {
+        guard let skeletonCellIdentifier = tableView.skeletonCellIdentifier else {
             return UITableViewCell()
         }
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: skeletonCellIdentifier, for: indexPath)
         return cell
     }
     
@@ -35,4 +35,3 @@ class SkeletonTableViewDataSource: NSObject, UITableViewDataSource, UITableViewD
         cell.removeSkeleton()
     }
 }
-

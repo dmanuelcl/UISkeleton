@@ -17,6 +17,20 @@ extension UIView{
         static var isSkeletonable: String = "isSkeletonable"
         static var skeletonGradientsColors: String = "skeletonGradientsColors"
         static var isShowingSkeleton: String = "isShowingSkeleton"
+        static var animateSkeleton: String = "animateSkeleton"
+        static var showOnSkeletonView: String = "showOnSkeletonView"
+    }
+    
+    
+    @IBInspectable public var animateSkeleton: Bool{
+        get{
+            return associatedObject(base: self, key: &associatedKeys.animateSkeleton){
+                return true
+            }
+        }
+        set(value){
+            associateObject(base: self, key: &associatedKeys.animateSkeleton, value: value)
+        }
     }
     
     @IBInspectable public var isSkeletonable: Bool{
@@ -32,12 +46,12 @@ extension UIView{
     
     @IBInspectable public var showOnSkeletonView: Bool{
         get{
-            return associatedObject(base: self, key: &associatedKeys.isSkeletonable){
+            return associatedObject(base: self, key: &associatedKeys.showOnSkeletonView){
                 return true
             }
         }
         set(value){
-            associateObject(base: self, key: &associatedKeys.isSkeletonable, value: value)
+            associateObject(base: self, key: &associatedKeys.showOnSkeletonView, value: value)
         }
     }
     
@@ -73,10 +87,11 @@ extension UIView{
                 gradientLayer.cornerRadius = view.layer.cornerRadius
                 gradientLayer.colors = gradientsColors
                 view.layer.addSublayer(gradientLayer)
-                gradientLayers.append(gradientLayer)
+                if view.animateSkeleton{
+                    gradientLayers.append(gradientLayer)
+                }
                 view.isShowingSkeleton = true
             }
-            
             view.isHidden = !view.showOnSkeletonView
             
             gradientLayers += view.prepareViewsForSkeleton(gradientsColors: gradientsColors)
@@ -109,4 +124,3 @@ extension UIView{
     }
     
 }
-
